@@ -8,6 +8,12 @@ $day = $_POST['day'];
 $month = $_POST['month'];
 $year = $_POST['year'];
 
+$monthPrefix = 0;
+
+if(strlen($month) < 2 && strlen($month) > 0){
+    $month = $monthPrefix . $month;
+}
+
 $query = "INSERT INTO birthdays (person, day, month, year) VALUES ('$person', '$day', '$month', '$year')";
 
 var_dump($query);
