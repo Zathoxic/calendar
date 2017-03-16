@@ -1,12 +1,12 @@
 <?php
-$connection = new mysqli("localhost", "root", "", "calendar");
-if(!$connection){
+$conn = new mysqli("localhost", "root", "", "calendar");
+if(!$conn){
     die('No connection: ' . mysqli_connect_error());
 }
-    
-function GetBirthdays($connection){
-    $sql = "select * from birthdays ORDER BY month ASC";
-    
-    $result = mysqli_query($connection, $sql);
-    
+
+function GetBirthdays($conn){
+    $query = "select * from birthdays ORDER BY month ASC";
+
+    $result = mysqli_query($conn, $query);
+
 }
